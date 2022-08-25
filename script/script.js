@@ -128,15 +128,15 @@ const settingDeck = document.querySelector('.settingDeck');
 
 function removeCard() {
 if (TheDifficulty === 'veryEasy') {
-    cardsBlue.splice(3,8);
+    cardsBlue.splice(3,9);
     cardsGreen.splice(13,5);
-    cardsBrown.splice(16,5)
+    cardsBrown.splice(16,5);
     return
 }
 if (TheDifficulty === 'easy') {
     cardsBlue.splice(8,4);
     cardsGreen.splice(13,5);
-    cardsBrown.splice(16,5)
+    cardsBrown.splice(16,5);
     return
 }
 if (TheDifficulty === 'hard'){
@@ -153,11 +153,21 @@ if (TheDifficulty === 'veryHard'){
 }
 }
 
-
+let cardCounterBlue = 0
 
 function firstBlue(bl, k) {
     for (let i=0; i<bl; i++) {
         let j= randomIntFromInterval(0, (cardsBlue.length-1));
+
+        if (TheDifficulty === 'veryEasy'  && cardCounterBlue <  4) {
+            while (cardsBlue[j].type == 'normal') { j= randomIntFromInterval(0, (cardsBlue.length-1-cardCounterBlue))}
+            cardCounterBlue++;
+        }
+        if (TheDifficulty === 'veryHard'  && cardCounterBlue <  4) {
+            while (cardsBlue[j].type == 'normal') { j= randomIntFromInterval(cardCounterBlue, (cardsBlue.length-1))}
+            cardCounterBlue++;
+        }
+        
         cardDeck[i] = cardsBlue[j];
         let cardCell = document.createElement('div');
         cardCell.classList.add('cardCell');
@@ -185,10 +195,21 @@ function firstBlue(bl, k) {
         }
     }
 }
+let cardCounterBrown = 0
 
 function firstBrown(bl, br, k) {
     for (let i=bl; i<(bl+br); i++) {
         let j= randomIntFromInterval(0, (cardsBrown.length-1));
+
+        if (TheDifficulty === 'veryEasy'  && cardCounterBrown <  5) {
+            while (cardsBrown[j].type == 'normal') { j= randomIntFromInterval(0, (cardsBrown.length-1-cardCounterBrown))}
+            cardCounterBrown++;
+        }
+        if (TheDifficulty === 'veryHard'  && cardCounterBrown <  5) {
+            while (cardsBrown[j].type == 'normal') { j= randomIntFromInterval(cardCounterBrown, (cardsBrown.length-1))}
+            cardCounterBrown++;
+        }
+
         cardDeck[i] = cardsBrown[j];
         let cardCell = document.createElement('div')
         cardCell.classList.add('cardCell');
@@ -216,9 +237,21 @@ function firstBrown(bl, br, k) {
         }
 }}
 
+let cardCounterGreen = 0
+
 function firstGreen(bl, br, gr, k) {
     for (let i=(bl+br); i<(bl+br+gr); i++) {
         let j= randomIntFromInterval(0, (cardsGreen.length-1));
+
+        if (TheDifficulty === 'veryEasy' && cardCounterGreen < 5) {
+            while (cardsGreen[j].type == 'normal') { j= randomIntFromInterval(0, (cardsGreen.length-1-cardCounterGreen))}
+            cardCounterGreen++;
+        }   
+        if (TheDifficulty === 'veryHard'  && cardCounterGreen <  5) {
+            while (cardsGreen[j].type == 'normal') { j= randomIntFromInterval(cardCounterGreen, (cardsGreen.length-1))}
+            cardCounterGreen++;
+        }
+
         cardDeck[i] = cardsGreen[j];
         let cardCell = document.createElement('div');
         cardCell.classList.add('cardCell');

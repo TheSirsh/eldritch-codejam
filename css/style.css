@@ -185,6 +185,9 @@ h2 {
     }
 
 .bl1, .bl2, .bl3, .br1, .br2, .br3, .gr1, .gr2, .gr3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 20px;
     height: 20px;
     border-radius: 10px;
@@ -247,6 +250,8 @@ h2 {
 
 .btnFinal {
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 50%;
     height: 7vh;
     margin: 10px;
@@ -256,8 +261,6 @@ h2 {
     color: #FFFFFF;
     border-color: #292222;
     font-size: calc(100vw/100);
-    align-items: center;
-justify-content: center;
     margin: 10px auto;
 }
 

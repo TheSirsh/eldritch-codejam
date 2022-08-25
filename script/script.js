@@ -6,7 +6,6 @@ import cardsGreen from '../assets/MythicCards/green/index.js'
 
 const ancientsBox = document.querySelector('.ancientsBox')
 const settingAncient = document.querySelector('.settingAncient');
-let TheAncient = ''
 let TheDifficulty = ''
 
 let ancientsArr = []
@@ -62,7 +61,6 @@ function chosenAncient(elem) {
     ancientsArr[i].classList.remove('inactive');
     ancientsArr[i].classList.add('active');
     settingAncient.classList.remove('inactive');
-    TheAncient = ancients[i].ancientTag;
     settingAncient.textContent = 'Ваш Древний - ' + ancients[i].ancientName;
     blueSt = ancients[i].blue1;
     blueNd = ancients[i].blue2;
@@ -128,7 +126,32 @@ cardBg.addEventListener('click', setUpDeck1);
 let cardDeck = [];
 const settingDeck = document.querySelector('.settingDeck');
 
-
+function removeCard() {
+if (TheDifficulty === 'veryEasy') {
+    cardsBlue.splice(3,8);
+    cardsGreen.splice(13,5);
+    cardsBrown.splice(16,5)
+    return
+}
+if (TheDifficulty === 'easy') {
+    cardsBlue.splice(8,4);
+    cardsGreen.splice(13,5);
+    cardsBrown.splice(16,5)
+    return
+}
+if (TheDifficulty === 'hard'){
+    cardsBlue.splice(0,4);
+    cardsGreen.splice(0,5);
+    cardsBrown.splice(0,5);
+    return
+}
+if (TheDifficulty === 'veryHard'){
+    cardsBlue.splice(0,7);
+    cardsGreen.splice(0,5);
+    cardsBrown.splice(0,5);
+    return
+}
+}
 
 
 
@@ -230,9 +253,10 @@ function setUpDeck1() {
     settingDeck.classList.remove('inactive')
     settingDeck.textContent = 'Колода замешивается - прогресс 1/3'
 
-    firstBlue(bl, 1) 
-    firstBrown(bl, br, 1)
-    firstGreen(bl, br, gr, 1)
+    removeCard();
+    firstBlue(bl, 1);
+    firstBrown(bl, br, 1);
+    firstGreen(bl, br, gr, 1);
 
     cardBg.removeEventListener('click', setUpDeck1)
     cardBg.addEventListener('click', setUpDeck2);
@@ -253,6 +277,8 @@ function setUpDeck2() {
     cardBg.addEventListener('click', setUpDeck3);
 }
 
+
+
 function setUpDeck3() {
     let bl = blueRd
     let br = brownRd
@@ -263,6 +289,25 @@ function setUpDeck3() {
     firstBrown(bl, br, 3)
     firstGreen(bl, br, gr, 3)
 
-    cardBg.removeEventListener('click', setUpDeck3)
+    cardBg.classList.add('inactive');
+    cardBg.removeEventListener('click', setUpDeck3);
+    stage3.classList.add('hide')
+    stage4.classList.remove('hide')
+    btnFinal.addEventListener('click', deckFinal);
 }
 
+const cards = document.querySelector('.cards');
+const stage4 = document.querySelector('.stage4');
+const stage5 = document.querySelector('.stage5');
+const settingFinal = document.querySelector('.settingFinal');
+const btnFinal = document.querySelector('.btnFinal');
+const settingItsDone = document.querySelector('.settingItsDone');
+
+function deckFinal() {
+    settingFinal.classList.remove('inactive')
+    settingFinal.textContent = 'Колода сложена'
+    cards.classList.add('hide')
+    stage4.classList.add('hide')
+    stage5.classList.remove('hide')
+    settingItsDone.classList.remove('hide')
+}

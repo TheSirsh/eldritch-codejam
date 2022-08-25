@@ -60,7 +60,7 @@ h2 {
 .ancientCard {
     height: 90%;
     width: 10vw;
-    background-size: cover;
+    background-size: contain;
 }
 
 
@@ -127,16 +127,16 @@ h2 {
 }
 
 .difficult {
-    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    width: 10%;
 }
 
 .btn {
     display: block;
-    width: 10%;
+    width: 100%;
     height: 7vh;
     margin: 10px;
     border-radius: 10px;
@@ -170,6 +170,11 @@ h2 {
     background-image: url('../assets/mythicCardBackground.png');
     background-size: cover !important;
     margin: 0px auto 10px auto;
+}
+
+.cardBackground:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #FFFFFF;
 }
 
 .counter {
@@ -223,7 +228,46 @@ h2 {
     text-align: center;
 }
 
+.cardBackgroundFinal {
+    display: block;
+    height: 20vw;
+    width: 12vw;
+    background-image: url('../assets/mythicCardBackground.png');
+    background-size: cover !important;
+    margin: 0px auto 10px auto;
+}
 
+
+.stage5 {
+    margin-left: 43vw;
+    width: 14vw;
+    text-align: center;
+    justify-content: center;
+}
+
+.btnFinal {
+    display: flex;
+    width: 50%;
+    height: 7vh;
+    margin: 10px;
+    border-radius: 10px;
+    font-family: LovecraftFont;
+    background-color: #331515;
+    color: #FFFFFF;
+    border-color: #292222;
+    font-size: calc(100vw/100);
+    align-items: center;
+justify-content: center;
+    margin: 10px auto;
+}
+
+.btnFinal:hover {
+    color:#331515;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bolder; 
+ }
+ 
 .hide {
     display: none;
 }

@@ -1,4 +1,29 @@
 const cardsBrown = [{
+  "cardTag" : "brown11",
+  "cardName": "Доброе предзнаменование",
+  "type"    : "snowflake",
+  "imgSrc"  : './assets/MythicCards/brown/brown11.png'
+},{
+  "cardTag" : "brown12",
+  "cardName": "Сплотить людей",
+  "type"    : "snowflake",
+  "imgSrc"  : './assets/MythicCards/brown/brown12.png'
+},{
+  "cardTag" : "brown13",
+  "cardName": "У всего есть своя цена",
+  "type"    : "snowflake",
+  "imgSrc"  : './assets/MythicCards/brown/brown13.png'
+},{
+  "cardTag" : "brown14",
+  "cardName": "Помощь серебряных сумерек",
+  "type"    : "snowflake",
+  "imgSrc"  : './assets/MythicCards/brown/brown14.png'
+},{
+  "cardTag" : "brown21",
+  "cardName": "Мир не сдаётся",
+  "type"    : "snowflake",
+  "imgSrc"  : './assets/MythicCards/brown/brown21.png'
+},{
   "cardTag" : "brown1",
   "cardName": "Древние хранители",
   "type"    : "normal",
@@ -23,51 +48,6 @@ const cardsBrown = [{
   "cardName": "Бермудский треугольник",
   "type"    : "normal",
   "imgSrc"  : './assets/MythicCards/brown/brown5.png'
-},{
-  "cardTag" : "brown6",
-  "cardName": "Буря",
-  "type"    : "tentacles",
-  "imgSrc"  : './assets/MythicCards/brown/brown6.png'
-},{
-  "cardTag" : "brown7",
-  "cardName": "Всё напрасно",
-  "type"    : "tentacles",
-  "imgSrc"  : './assets/MythicCards/brown/brown7.png'
-},{
-  "cardTag" : "brown8",
-  "cardName": "Отчаянные времена",
-  "type"    : "tentacles",
-  "imgSrc"  : './assets/MythicCards/brown/brown8.png'
-},{
-  "cardTag" : "brown9",
-  "cardName": "Звёзды сбивают с толку",
-  "type"    : "tentacles",
-  "imgSrc"  : './assets/MythicCards/brown/brown9.png'
-},{
-  "cardTag" : "brown10",
-  "cardName": "Неусыпная слежка",
-  "type"    : "tentacles",
-  "imgSrc"  : './assets/MythicCards/brown/brown10.png'
-},{
-  "cardTag" : "brown11",
-  "cardName": "Доброе предзнаменование",
-  "type"    : "snowflake",
-  "imgSrc"  : './assets/MythicCards/brown/brown11.png'
-},{
-  "cardTag" : "brown12",
-  "cardName": "Сплотить людей",
-  "type"    : "snowflake",
-  "imgSrc"  : './assets/MythicCards/brown/brown12.png'
-},{
-  "cardTag" : "brown13",
-  "cardName": "У всего есть своя цена",
-  "type"    : "snowflake",
-  "imgSrc"  : './assets/MythicCards/brown/brown13.png'
-},{
-  "cardTag" : "brown14",
-  "cardName": "Помощь серебряных сумерек",
-  "type"    : "snowflake",
-  "imgSrc"  : './assets/MythicCards/brown/brown14.png'
 },{
   "cardTag" : "brown15",
   "cardName": "Навязчивые кошмары",
@@ -99,10 +79,30 @@ const cardsBrown = [{
   "type"    : "normal",
   "imgSrc"  : './assets/MythicCards/brown/brown20.png'
 },{
-  "cardTag" : "brown21",
-  "cardName": "Мир не сдаётся",
-  "type"    : "snowflake",
-  "imgSrc"  : './assets/MythicCards/brown/brown21.png'
+  "cardTag" : "brown6",
+  "cardName": "Буря",
+  "type"    : "tentacles",
+  "imgSrc"  : './assets/MythicCards/brown/brown6.png'
+},{
+  "cardTag" : "brown7",
+  "cardName": "Всё напрасно",
+  "type"    : "tentacles",
+  "imgSrc"  : './assets/MythicCards/brown/brown7.png'
+},{
+  "cardTag" : "brown8",
+  "cardName": "Отчаянные времена",
+  "type"    : "tentacles",
+  "imgSrc"  : './assets/MythicCards/brown/brown8.png'
+},{
+  "cardTag" : "brown9",
+  "cardName": "Звёзды сбивают с толку",
+  "type"    : "tentacles",
+  "imgSrc"  : './assets/MythicCards/brown/brown9.png'
+},{
+  "cardTag" : "brown10",
+  "cardName": "Неусыпная слежка",
+  "type"    : "tentacles",
+  "imgSrc"  : './assets/MythicCards/brown/brown10.png'
 }]
 
 export default cardsBrown
